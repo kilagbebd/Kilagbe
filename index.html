@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="bn">
 <head>
@@ -7,47 +6,53 @@
     <title>কি লাগবে বিডি - দারাজ মল</title>
     <style>
         body { font-family: Arial, sans-serif; background: #f5f5f5; margin: 0; padding: 10px; padding-bottom: 40px; }
-        header { background: #f57224; color: white; text-align: center; padding: 15px; font-size: 20px; font-weight: bold; border-radius: 4px; margin-bottom: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        /* টেক্সট লোগো হেডার */
+        header { background: #f57224; color: white; text-align: center; padding: 15px; font-size: 22px; font-weight: bold; border-radius: 4px; margin-bottom: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        header span { background: #003366; padding: 2px 8px; border-radius: 4px; margin-right: 5px; font-size: 18px; }
         .sec-title { font-size: 16px; margin: 20px 0 10px 0; color: #003366; font-weight: bold; border-left: 4px solid #f57224; padding-left: 6px; }
         .grid { display: flex; flex-wrap: wrap; gap: 10px; }
-        .card { background: white; border: 1px solid #ddd; border-radius: 4px; padding: 8px; width: 48%; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
-        .card img { width: 100%; height: 110px; object-fit: cover; border-radius: 2px; }
-        .title { font-size: 12px; margin: 5px 0; height: 34px; overflow: hidden; color: #333; line-height: 17px; }
-        .price { color: #f57224; font-weight: bold; font-size: 15px; margin-bottom: 8px; }
-        .btn { background: linear-gradient(90deg, #ff6b00, #f57224); color: white; border: none; padding: 8px; width: 100%; border-radius: 3px; font-weight: bold; cursor: pointer; font-size: 12px; }
+        .card { background: white; border: 1px solid #ddd; border-radius: 4px; padding: 12px; width: 48%; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        /* ছবি ছাড়াই রঙিন ও বড় প্রোডাক্ট আইকন */
+        .product-icon { font-size: 50px; background: #fff1eb; padding: 15px 0; border-radius: 4px; margin-bottom: 8px; }
+        .title { font-size: 13px; margin: 5px 0; height: 34px; overflow: hidden; color: #333; line-height: 17px; font-weight: bold; }
+        .price { color: #f57224; font-weight: bold; font-size: 16px; margin-bottom: 8px; }
+        .btn { background: linear-gradient(90deg, #ff6b00, #f57224); color: white; border: none; padding: 10px; width: 100%; border-radius: 3px; font-weight: bold; cursor: pointer; font-size: 13px; }
     </style>
 </head>
 <body>
 
-    <header>Ki Lagbe BD (দারাজ মল)</header>
+    <!-- লোগো এরিয়া ফিক্সড -->
+    <header><span>KL</span> Ki Lagbe BD</header>
 
+    <!-- ১. মুদি পণ্য -->
     <div class="sec-title">🌾 মুদি ও নিত্যপ্রয়োজনীয় পণ্য</div>
     <div class="grid">
         <div class="card">
-            <img src="https://unsplash.com">
+            <div class="product-icon">🌾</div>
             <div class="title">প্রিমিয়াম মিনিকেট চাল দেশি (২৫ কেজি বস্তা)</div>
             <div class="price">৳১,৭৫০</div>
             <button class="btn" onclick="buy('মিনিকেট চাল (২৫ কেজি)', '৳১,৭৫০')">অর্ডার করুন</button>
         </div>
         <div class="card">
-            <img src="https://unsplash.com">
+            <div class="product-icon">🍯</div>
             <div class="title">ঘানি ভাঙা খাঁটি সরিষার তেল (১ লিটার)</div>
             <div class="price">৳২৪০</div>
             <button class="btn" onclick="buy('খাঁটি সরিষার তেল (১ লিটার)', '৳২৪০')">অর্ডার করুন</button>
         </div>
     </div>
 
+    <!-- ২. কসমেটিকস -->
     <div class="sec-title">💄 কসমেটিকস ও জুয়েলারি কালেকশন</div>
     <div class="grid">
         <div class="card">
-            <img src="https://unsplash.com">
+            <div class="product-icon">💄</div>
             <div class="title">প্রফেশনাল মেকআপ ও লিপস্টিক কম্বো কিট</div>
             <div class="price">৳১,২০০</div>
             <button class="btn" onclick="buy('মেকআপ কম্বো কিট', '৳১,২০০')">অর্ডার করুন</button>
         </div>
         <div class="card">
-            <img src="https://unsplash.com">
-            <div class="title">মেয়েরদের ফ্যাশনেবল গোল্ড প্লেটেড নেকলেস</div>
+            <div class="product-icon">👑</div>
+            <div class="title">মেয়েরদের ফ্যাশনেবল গোল্ড প্লেটেড নেকলেс</div>
             <div class="price">৳১,৫০০</div>
             <button class="btn" onclick="buy('গোল্ড প্লেটেড নেকলেস', '৳১,৫০০')">অর্ডার করুন</button>
         </div>
@@ -56,7 +61,7 @@
     <script>
         function buy(name, price) {
             var phone = "8801755819019";
-            var msg = "হ্যালো কি লাগবে বিডি! আমি এই পণ্যটি অর্ডার করতে চাই:\n\n📦 পণ্য: " + name + "\n💰 মূল্য: " + price;
+            var msg = "হ্যালো কি লাগবে বিডি! আমি এই পণ্যটি অর্ডার করতে চাই:\n\n📦 পণ্য: " + name + "\n💰 মূল্য: " + price + "\n\nডেলিভারি প্রসেসটি জানান।";
             window.open("https://whatsapp.com" + phone + "&text=" + encodeURIComponent(msg), '_blank');
         }
     </script>
