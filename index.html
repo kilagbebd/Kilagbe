@@ -8,19 +8,17 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: Arial, sans-serif; background-color: #f5f5f5; padding: 10px; padding-bottom: 40px; }
         
-        /* লোগো হেডার স্টাইল */
-        header { background-color: #f57224; color: white; text-align: center; padding: 15px; font-size: 22px; font-weight: bold; border-radius: 4px; margin-bottom: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        header span { background-color: #003366; padding: 2px 8px; border-radius: 4px; margin-right: 8px; font-size: 18px; }
+        /* প্রফেশনাল ইমেজ লোগো হেডার */
+        header { background-color: #f57224; color: white; display: flex; align-items: center; justify-content: center; gap: 10px; padding: 10px; border-radius: 4px; margin-bottom: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        
+        /* গিটহাব প্রোফাইল লোগো সাইজ */
+        .profile-logo { width: 45px; height: 45px; border-radius: 50%; border: 2px solid white; object-fit: cover; }
+        .logo-text { font-size: 22px; font-weight: bold; }
         
         .sec-title { font-size: 16px; margin: 20px 0 10px 0; color: #003366; font-weight: bold; border-left: 4px solid #f57224; padding-left: 6px; }
-        
-        /* প্রোডাক্ট গ্রিড লেআউট */
         .grid { display: flex; flex-wrap: wrap; gap: 10px; }
         .card { background: white; border: 1px solid #ddd; border-radius: 4px; padding: 12px; width: 48%; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; text-align: center; }
-        
-        /* ইমোজি আইকন বক্স (ভাঙা ইমেজ বক্স দূর করার জন্য) */
         .product-icon { font-size: 45px; background-color: #fff1eb; padding: 15px 0; border-radius: 4px; margin-bottom: 8px; line-height: 1; display: block; }
-        
         .title { font-size: 13px; margin: 5px 0; height: 34px; overflow: hidden; color: #333; line-height: 17px; font-weight: bold; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
         .price { color: #f57224; font-weight: bold; font-size: 16px; margin-bottom: 8px; }
         .btn { background: linear-gradient(90deg, #ff6b00, #f57224); color: white; border: none; padding: 10px; width: 100%; border-radius: 3px; font-weight: bold; cursor: pointer; font-size: 13px; }
@@ -28,10 +26,12 @@
 </head>
 <body>
 
-    <!-- হেডার লোগো -->
-    <header><span>KL</span> Ki Lagbe BD</header>
+    <!-- আপনার গিটহাব প্রফাইল লোগো সরাসরি এখানে কানেক্ট করা হয়েছে -->
+    <header>
+        <img class="profile-logo" src="https://github.com" alt="Ki Lagbe BD Profile Logo">
+        <div class="logo-text">Ki Lagbe BD</div>
+    </header>
 
-    <!-- ১. মুদি পণ্য -->
     <div class="sec-title">🌾 মুদি ও নিত্যপ্রয়োজনীয় পণ্য</div>
     <div class="grid">
         <div class="card">
@@ -48,7 +48,6 @@
         </div>
     </div>
 
-    <!-- ২. কসমেটিকস -->
     <div class="sec-title">💄 কসমেটিকস ও জুয়েলারি কালেকশন</div>
     <div class="grid">
         <div class="card">
