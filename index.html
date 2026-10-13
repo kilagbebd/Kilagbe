@@ -5,72 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>কি লাগবে বিডি - দারাজ মল</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: Arial, sans-serif; background-color: #f5f5f5; padding: 10px; padding-bottom: 40px; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+        body { background-color: #f4f6f9; color: #333; padding: 12px; padding-bottom: 50px; }
         
-        /* প্রফেশনাল ইমেজ লোগো হেডার */
-        header { background-color: #f57224; color: white; display: flex; align-items: center; justify-content: center; gap: 10px; padding: 10px; border-radius: 4px; margin-bottom: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        /* দারাজ স্টাইল প্রফেশনাল হেডার */
+        header { background-color: #ffffff; display: flex; align-items: center; justify-content: center; gap: 12px; padding: 12px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border-radius: 6px; }
         
-        /* গিটহাব প্রোফাইল লোগো সাইজ */
-        .profile-logo { width: 45px; height: 45px; border-radius: 50%; border: 2px solid white; object-fit: cover; }
-        .logo-text { font-size: 22px; font-weight: bold; }
+        /* আপনার আপলোড করা mylogo.png এর জন্য নিখুঁত সাইজ */
+        .brand-logo { max-width: 140px; height: auto; display: block; object-fit: contain; }
+        .logo-text { font-size: 22px; font-weight: bold; color: #002244; }
+        .logo-text span { color: #f57224; }
         
-        .sec-title { font-size: 16px; margin: 20px 0 10px 0; color: #003366; font-weight: bold; border-left: 4px solid #f57224; padding-left: 6px; }
-        .grid { display: flex; flex-wrap: wrap; gap: 10px; }
-        .card { background: white; border: 1px solid #ddd; border-radius: 4px; padding: 12px; width: 48%; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; text-align: center; }
-        .product-icon { font-size: 45px; background-color: #fff1eb; padding: 15px 0; border-radius: 4px; margin-bottom: 8px; line-height: 1; display: block; }
-        .title { font-size: 13px; margin: 5px 0; height: 34px; overflow: hidden; color: #333; line-height: 17px; font-weight: bold; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
-        .price { color: #f57224; font-weight: bold; font-size: 16px; margin-bottom: 8px; }
-        .btn { background: linear-gradient(90deg, #ff6b00, #f57224); color: white; border: none; padding: 10px; width: 100%; border-radius: 3px; font-weight: bold; cursor: pointer; font-size: 13px; }
+        /* ক্যাটাগরি শিরোনামের ফিক্সড ডিজাইন */
+        .sec-title { font-size: 16px; margin: 25px 0 12px 0; color: #002244; font-weight: bold; border-left: 5px solid #f57224; padding-left: 8px; display: flex; align-items: center; }
+        
+        /* মোবাইলে ২টি করে পণ্য সুন্দরভাবে দেখানোর আধুনিক গ্রিড */
+        .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+        
+        /* প্রফেশনাল প্রোডাক্ট কার্ড */
+        .card { background: #ffffff; border-radius: 8px; border: 1px solid #e2e8f0; padding: 12px; display: flex; flex-direction: column; justify-content: space-between; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.02); transition: transform 0.2s; }
+        .card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+        
+        /* ভাঙা বাক্স দূর করে রঙিন আইকন বক্স */
+        .product-icon { font-size: 48px; background-color: #fff3eb; padding: 15px 0; border-radius: 6px; margin-bottom: 10px; display: block; line-height: 1; }
+        
+        /* টাইটেল ও প্রাইস */
+        .title { font-size: 13px; color: #4a5568; line-height: 18px; height: 36px; overflow: hidden; margin-bottom: 8px; font-weight: 600; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+        .price { color: #f57224; font-weight: bold; font-size: 17px; margin-bottom: 10px; display: block; }
+        
+        /* প্রফেশনাল বোতাম */
+        .btn { background: linear-gradient(135deg, #ff6b00, #f57224); color: white; border: none; padding: 10px; width: 100%; border-radius: 6px; font-weight: bold; cursor: pointer; font-size: 13px; box-shadow: 0 2px 4px rgba(245,114,36,0.2); transition: background 0.2s; }
+        .btn:hover { background: #e05e00; }
     </style>
 </head>
 <body>
 
-    <!-- সম্পূর্ণ ফিক্সড প্রোফাইল লোগো লিংক -->
+    <!-- সংশোধিত ও ফিক্সড হেডার এরিয়া -->
     <header>
-        <img class="profile-logo" alt="Ki Lagbe BD Profile Logo">
-        <div class="logo-text">Ki Lagbe BD</div>
-        <header>
-        <img src="mylogo.png" alt="Logo" style="max-width: 150px; height: auto; display: block; margin: 0 auto;">
+        <img class="brand-logo" src="mylogo.png" alt="Ki Lagbe BD Logo">
+        <div class="logo-text">Ki Lagbe <span>BD</span></div>
     </header>
 
-
-    <div class="sec-catagori">🌾 মুদি ও নিত্যপ্রয়োজনীয় পণ্য</div>
+    <!-- ১. মুদি পণ্য সেকশন -->
+    <div class="sec-title">🌾 মুদি ও নিত্যপ্রয়োজনীয় পণ্য</div>
     <div class="grid">
         <div class="card">
             <span class="product-icon">🌾</span>
             <div class="title">প্রিমিয়াম মিনিকেট চাল দেশি (২৫ কেজি বস্তা)</div>
-            <div class="price">৳১,৭৫০</div>
+            <span class="price">৳১,৭৫০</span>
             <button class="btn" onclick="buy('মিনিকেট চাল (২৫ কেজি)', '৳১,৭৫০')">অর্ডার করুন</button>
         </div>
         <div class="card">
             <span class="product-icon">🍯</span>
             <div class="title">ঘানি ভাঙা খাঁটি সরিষার তেল (১ লিটার)</div>
-            <div class="price">৳২৪০</div>
+            <span class="price">৳২৪০</span>
             <button class="btn" onclick="buy('খাঁটি সরিষার তেল (১ লিটার)', '৳২৪০')">অর্ডার করুন</button>
         </div>
     </div>
 
+    <!-- ২. কসমেটিকস সেকশন -->
     <div class="sec-title">💄 কসমেটিকস ও জুয়েলারি কালেকশন</div>
     <div class="grid">
         <div class="card">
             <span class="product-icon">💄</span>
             <div class="title">প্রফেশনাল মেকআপ ও লিপস্টিক কম্বো কিট</div>
-            <div class="price">৳১,২০০</div>
+            <span class="price">৳১,২০০</span>
             <button class="btn" onclick="buy('মেকআপ কম্বো কিট', '৳১,২০০')">অর্ডার করুন</button>
         </div>
         <div class="card">
             <span class="product-icon">👑</span>
-            <div class="title">মেয়েরদের ফ্যাশনেবল গোল্ড প্লেটেড নেকলেস</div>
-            <div class="price">৳১,৫০০</div>
+            <div class="title">মেয়েদের ফ্যাশনেবল গোল্ড প্লেটেড নেকলেস</div>
+            <span class="price">৳১,৫০০</span>
             <button class="btn" onclick="buy('গোল্ড প্লেটেড নেকলেস', '৳১,৫০০')">অর্ডার করুন</button>
         </div>
     </div>
 
+    <!-- ১০০% সচল হোয়াটসঅ্যাপ এপিআই গেটওয়ে -->
     <script>
         function buy(name, price) {
             var phone = "8801755819019";
-            var msg = "হ্যালো কি লাগবে বিডি! আমি এই পণ্যটি অর্ডার করতে চাই:\n\n📦 পণ্য: " + name + "\n💰 মূল্য: " + price;
+            var msg = "হ্যালো কি লাগবে বিডি! আমি এই পণ্যটি অর্ডার করতে চাই:\n\n📦 পণ্য: " + name + "\n💰 মূল্য: " + price + "\n\nঅনুগ্রহ করে ডেলিভারি প্রক্রিয়াটি জানাবেন।";
             window.open("https://whatsapp.com" + phone + "&text=" + encodeURIComponent(msg), '_blank');
         }
     </script>
